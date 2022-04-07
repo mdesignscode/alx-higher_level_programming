@@ -1,1 +1,0 @@
-I'm learning how to write shell scripts
