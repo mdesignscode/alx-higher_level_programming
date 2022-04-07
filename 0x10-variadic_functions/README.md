@@ -1,1 +1,0 @@
-__variadic__ **functions**
