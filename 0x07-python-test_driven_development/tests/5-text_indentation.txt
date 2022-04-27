@@ -1,0 +1,56 @@
+The ```` module
+============================
+
+Using ````
+---------------------
+
+Importing the function from the module
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Regular input
+	>>> text_indentation("Here's: a test? string.")
+	Here's:
+	<BLANKLINE>
+	a test?
+	<BLANKLINE>
+	string.
+	<BLANKLINE>
+
+Checking Type
+	>>> text_indentation(90)
+    	Traceback (most recent call last):
+    	TypeError: text must be a string
+
+Checking for one word
+	>>> text_indentation('Hello')
+	Hello
+
+Ending in delimiter
+       >>> text_indentation('Hello.')
+       Hello.
+       <BLANKLINE>
+
+Ending in non-delimiter
+       >>> text_indentation('Hello: World')
+       Hello:
+       <BLANKLINE>
+       World
+
+Starting with new line
+       >>> text_indentation('\nHello')
+       <BLANKLINE>
+       Hello
+
+Starting with new line
+       >>> text_indentation('\nHello')
+       <BLANKLINE>
+       Hello
+
+New line in middle
+       >>> text_indentation('Hel\nlo')
+       Hel
+       lo
+
+Ending with new line
+       >>> text_indentation('Hello\n')
+       Hello
