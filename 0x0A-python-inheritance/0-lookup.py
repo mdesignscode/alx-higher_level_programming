@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Return the list of available attributes and methods of an object                            
 obj is the object to return the list for                                                       
 """
