@@ -15,7 +15,7 @@ Non-int value
     >>> geom.integer_validator('Johnny', 'Bravo')
     Traceback (most recent call last):
     TypeError: Johnny must be an integer
-    >>> geom.integer_validator('Joe', None)
+    >>> geom.integer_validator('Joe', True)
     Traceback (most recent call last):
     TypeError: Joe must be an integer
 
