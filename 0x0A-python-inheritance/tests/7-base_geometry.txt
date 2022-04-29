@@ -1,0 +1,28 @@
+The ``7-base_geometry`` module
+===========================
+
+Using ``BaseGeometry``
+-----------------------
+
+Importing the function from the module
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Given number as value
+    >>> geom = BaseGeometry()
+    >>> geom.integer_validator('Test', 1)
+
+Non-int value
+    >>> geom.integer_validator('Johnny', 'Bravo')
+    Traceback (most recent call last):
+    TypeError: Johnny must be an integer
+    >>> geom.integer_validator('Joe', None)
+    Traceback (most recent call last):
+    TypeError: Joe must be an integer
+
+Zero or negative number
+    >>> geom.integer_validator('John', 0)
+    Traceback (most recent call last):
+    ValueError: John must be greater than 0
+    >>> geom.integer_validator('Joe', -10)
+    Traceback (most recent call last):
+    ValueError: Joe must be greater than 0

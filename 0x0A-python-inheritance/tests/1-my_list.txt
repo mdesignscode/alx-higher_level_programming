@@ -1,0 +1,47 @@
+The ``1-my_list`` module
+===========================
+
+Using ``MyList``
+----------------
+
+Importing the function from the module
+    >>>	MyList = __import__('1-my_list').MyList
+
+Check append and print_sorted methods
+    >>> list_object = MyList()
+    >>> list_object.append(10)
+    >>> list_object.append(150)
+    >>> list_object.append(90)
+    >>> list_object.append(790)
+    >>> list_object.print_sorted()
+    [10, 90, 150, 790]
+    >>> print(list_object)
+    [10, 150, 90, 790]
+
+Empty List
+    >>> MyList().print_sorted()
+    []
+
+Checking inheritance
+    >>> issubclass(MyList, list)
+    True
+    >>> isinstance(list_object, list)
+    True
+    >>>
+
+Negative Numbers
+    >>> list_object.append(None)
+    >>> list_object.clear()
+    >>> list_object.append(-1)
+    >>> list_object.append(-2)
+    >>> list_object.print_sorted()
+    [-2, -1]
+    >>> list_object.append(3)
+    >>> list_object.append(4)
+    >>> list_object.append(4)
+    >>> print(list_object)
+    [-1, -2, 3, 4, 4]
+    >>> list_object.print_sorted()
+    [-2, -1, 3, 4, 4]
+    >>> print(list_object)
+    [-1, -2, 3, 4, 4]
