@@ -1,0 +1,1 @@
+Revising all previous concepts
