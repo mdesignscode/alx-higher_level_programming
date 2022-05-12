@@ -60,11 +60,10 @@ class Base:
             json_string (str): a string representing a list of dictionaries
         """
         if json_string is None or len(json_string) == 0 \
-            or not isinstance(json_string, str):
+                or not isinstance(json_string, str):
             return []
 
         return json.loads(json_string)
-
 
     @classmethod
     def create(cls, **dictionary):
