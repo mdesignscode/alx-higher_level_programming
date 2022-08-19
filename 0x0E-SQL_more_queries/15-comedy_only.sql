@@ -1,9 +1,10 @@
 -- lists all Comedy shows in the database hbtn_0d_tvshows
 
 SELECT title
-FROM tv_shows AS tv
-JOIN tv_show_genres AS tv_g
-ON tv.id = tv_g.show_id
-WHERE genre_id = (
-    SELECT id FROM tv_genres WHERE name = 'Comedy')
+FROM tv_shows
+JOIN tv_show_genres
+ON tv_shows.id = tv_show_genres.show_id
+JOIN tv_genres
+ON tv_genres.id = tv_show_genres.genre_id
+WHERE name = 'Comedy'
 ORDER BY title;
