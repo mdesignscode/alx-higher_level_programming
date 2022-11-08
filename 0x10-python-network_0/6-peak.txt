@@ -1,0 +1,2 @@
+Worst, Average: O(n log(n))
+Best: O(n)
