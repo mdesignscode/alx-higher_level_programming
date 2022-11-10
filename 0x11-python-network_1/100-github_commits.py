@@ -9,7 +9,7 @@ from sys import argv
 if __name__ == '__main__':
     url = f"https://api.github.com/repos/{argv[2]}/{argv[1]}/commits"
     params = {"sort": "date"}
-    response =  get(url, )
+    response = get(url, params)
 
     for index, commit in enumerate(response.json()):
         sha, author = commit['sha'], commit['commit']['author']['name']
