@@ -8,8 +8,10 @@ from sys import argv
 
 USER = argv[1]
 TOKEN = argv[2]
-headers = {'Authorization': 'USER:TOKEN'}
 
 if __name__ == '__main__':
-    user = get(f'https://api.github.com/users/{USER}', headers=headers)
-    print(user.json()['id'])
+    user = get('https://api.github.com/user', auth=(USER, TOKEN))
+    try:
+        print(user.json()['id'])
+    except KeyError:
+        print(None)
